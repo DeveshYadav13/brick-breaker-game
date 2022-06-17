@@ -13,9 +13,17 @@ const ball = {
     x : canvas.width/2,
     y : canvas.height/2,
     size : 9,
-    speed : 3.8,
-    dx : 4,
-    dy : -4
+    speed : 0,
+    dx : 0,
+    dy : 0
+}
+
+function startGame(){
+    ball.speed = 3.8,
+    ball.dx = 4,
+    ball.dy = -4
+    const startBtn = document.getElementById('start');
+    startBtn.style.display = 'none';
 }
 
 // Create Paddle Props
