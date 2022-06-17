@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="./style.css">
+    <title>Brick Breaker</title>
+</head>
+<body>
+    <h1 class="heading">Brick Breaker</h1>
+    <button id="rules-btn" class="btn rules-btn">Show Rules</button>
+    <div id="rules" class="rules">
+        <h2>How to Play:</h2>
+        <p> Use your right and left keys to move the paddle to bounce the ball up and break the blocks.</p> 
+        <p> If you miss the ball, your score and the blocks will reset.</p>
+        <button id="close-btn" class="btn">Close</button>
+    </div>
+    <div class="game-wrapper">
+        <div class="main"></div>
+            <div class="lose">
+                <h1>GAME OVER</h1>
+                <h2>Better luck next time!</h2>
+                <button class="btn" onclick="window.location.reload()">Restart</button>
+            </div>
+            <div class="win">
+                <h1>YOU WIN!</h1>
+                <h2>Winner winner chicken dinner!</h2>
+                <button class="btn" onclick="window.location.reload()">Restart</button>
+            </div>
+    </div>
+    <canvas id="canvas" width="750" height="520"></canvas>
+    <script src="./index.js"></script>
+</body>
+</html>
