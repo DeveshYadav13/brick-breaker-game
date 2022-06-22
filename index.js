@@ -18,12 +18,38 @@ const ball = {
     dy : 0
 }
 
+const diffBtn = document.getElementById('difficulty');
+
 function startGame(){
-    ball.speed = 3.8,
-    ball.dx = 4,
-    ball.dy = -4
     const startBtn = document.getElementById('start');
     startBtn.style.display = 'none';
+    diffBtn.style.display = 'block';
+}
+
+
+function easyMode(){
+    ball.speed = 3.8,
+    ball.dx = 4,
+    ball.dy = -4,
+    hideDiffButton();
+}
+
+function mediumMode(){
+    ball.speed = 4.8,
+    ball.dx = 5.2,
+    ball.dy = -5.2,
+    hideDiffButton();
+}
+
+function hardMode(){
+    ball.speed = 5.6,
+    ball.dx = 5.9,
+    ball.dy = -5.9,
+    hideDiffButton();
+}
+
+function hideDiffButton(){
+    diffBtn.style.display = 'none';
 }
 
 // Create Paddle Props
