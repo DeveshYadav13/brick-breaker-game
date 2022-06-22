@@ -1,9 +1,9 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
-    background-color: #0095dd;
+body {
+    background-color: #5B5EA6;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,46 +13,86 @@ body{
     margin: 0;
 }
 
-canvas{
+canvas {
     background: #f0f0f0;
     display: block;
     border-radius: 5px;
     margin-bottom: 20px;
 }
 
-h1{
+h1 {
     font-size: 45px;
     color: white;
 }
 
-.btn{
+/* Buttons */
+.btn {
     cursor: pointer;
     border: 0;
     padding: 10px 20px;
     background-color: black;
     color: white;
-    border-radius : 5px;
+    border-radius: 5px;
 }
 
-.btn:focus{
-    outline:0;
+.btn:focus {
+    outline: 0;
 }
 
-.btn:hover{
+.btn:hover {
     background: #222;
 }
 
-.rules-btn{
+.rules-btn {
     position: absolute;
     top: 30px;
     left: 30px;
 }
 
-.rules{
+.start-btn{
+    cursor: pointer;
+    border: 0;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    width: 200px;
+    font-size: larger;
+    height: auto;
+}
+
+.start-btn:focus {
+    outline: 0;
+}
+.start-btn:hover {
+    background: #222;
+}
+.diff-btn{
+    cursor: pointer;
+    border: 0;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    height: auto;
+}
+
+.diff-btn:focus {
+    outline: 0;
+}
+.diff-btn:hover {
+    background: #222;
+}
+
+
+/* Divs */
+
+.rules {
     position: absolute;
     top: 0;
     left: 0;
-    background:#333;
+    background: #333;
     color: white;
     min-height: 100vh;
     width: 400px;
@@ -62,8 +102,8 @@ h1{
     transition: transform 1s ease-in-out;
 }
 
-.rules.show{
-    transform:translateX(0);
+.rules.show {
+    transform: translateX(0);
 }
 
 .game-wrapper {
@@ -71,24 +111,12 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .difficulty{
-    position: absolute;
-    display: none;
-    top :280px;
-    background: black;
-    color: white;
-    padding: 20px 50px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    text-align: center;
-    animation: pop-in 1s;
-  }
+}
 
-  .start{
+.difficulty {
     position: absolute;
-    top :280px;
+    display: none;
+    top: 280px;
     background: black;
     color: white;
     padding: 20px 50px;
@@ -96,29 +124,45 @@ h1{
     border-radius: 10px;
     text-align: center;
     animation: pop-in 1s;
-  }
- .lose {
-    display: none;
+    font-size: 20px;
+}
+
+.start {
     position: absolute;
-    top :280px;
-    background: #6b1818;
+    top: 320px;
+    background: black;
     color: white;
     padding: 20px 50px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     text-align: center;
     animation: pop-in 1s;
-  }
-  
-  .win  {
+    width: 350px;
+    height: 75px;
+}
+
+.lose {
     display: none;
     position: absolute;
-    top : 280px;
-    background: #05c04d;
+    top: 250px;
+    background: #009fdd;
     color: white;
     padding: 20px 50px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     text-align: center;
     animation: pop-in 1s;
-  }
+}
+
+.win {
+    display: none;
+    position: absolute;
+    top: 250px;
+    background: #009B77;
+    color: white;
+    padding: 20px 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    animation: pop-in 1s;
+}

@@ -3,6 +3,7 @@ const closeBtn = document.getElementById('close-btn');
 const rules = document.getElementById('rules');
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
+const diffBtn = document.getElementById('difficulty');
 
 let score = 0;
 const brickRowCount = 9;
@@ -18,39 +19,42 @@ const ball = {
     dy : 0
 }
 
-const diffBtn = document.getElementById('difficulty');
-
+// Starts the game
 function startGame(){
     const startBtn = document.getElementById('start');
     startBtn.style.display = 'none';
     diffBtn.style.display = 'block';
 }
 
+// Hides Difficulty div
+function hideDiff(){
+    diffBtn.style.display = 'none';
+}
 
+// Easy Mode
 function easyMode(){
     ball.speed = 3.8,
     ball.dx = 4,
     ball.dy = -4,
-    hideDiffButton();
+    hideDiff();
 }
 
+// Medium Mode
 function mediumMode(){
     ball.speed = 4.8,
     ball.dx = 5.2,
     ball.dy = -5.2,
-    hideDiffButton();
+    hideDiff();
 }
 
+// Difficulty Mode
 function hardMode(){
     ball.speed = 5.6,
     ball.dx = 5.9,
     ball.dy = -5.9,
-    hideDiffButton();
+    hideDiff();
 }
 
-function hideDiffButton(){
-    diffBtn.style.display = 'none';
-}
 
 // Create Paddle Props
 const paddle = {
@@ -87,7 +91,7 @@ for(let i = 0;i<brickRowCount;i++){
 function drawBall(){
     ctx.beginPath();
     ctx.arc(ball.x,ball.y,ball.size,0,Math.PI*2);
-    ctx.fillStyle = '#009fdd';
+    ctx.fillStyle = '#6B5B95';
     ctx.fill();
     ctx.closePath();
 }
@@ -96,7 +100,7 @@ function drawBall(){
 function drawPaddle(){
     ctx.beginPath();
     ctx.rect(paddle.x,paddle.y,paddle.w,paddle.h);
-    ctx.fillStyle = '#009fdd';
+    ctx.fillStyle = '#6B5B95';
     ctx.fill();
     ctx.closePath();
 }
@@ -113,7 +117,7 @@ function drawBricks(){
         column.forEach(brick =>{
             ctx.beginPath();
             ctx.rect(brick.x,brick.y,brick.w,brick.h);
-            ctx.fillStyle = brick.visible ? '#0095dd' : 'transparent';
+            ctx.fillStyle = brick.visible ? '#6B5B95' : 'transparent';
             ctx.fill();
             ctx.closePath();
         })
