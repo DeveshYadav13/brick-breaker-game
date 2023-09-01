@@ -3,6 +3,8 @@
 
 Live Website : https://deveshyadav13.github.io/brick-breaker-game/
 
+![](https://github.com/DeveshYadav13/brick-breaker-game/blob/master/gameplay.gif)
+
 • A simple game with 3 difficulty modes in which player has to break bricks by moving the paddle.
 
 • Created the layout of the game and designed props for ball, paddle and bricks using HTML Canvas.
